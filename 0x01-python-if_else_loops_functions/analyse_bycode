@@ -1,0 +1,6 @@
+LOAD_ FAST:  0 (a)
+pousser une reference a sur la pile
+LOAD_FAST    1 (b)
+pousser une reference b sur la pile
+:
+
