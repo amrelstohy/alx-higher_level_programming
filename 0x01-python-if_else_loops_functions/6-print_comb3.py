@@ -4,6 +4,6 @@ for x in range(10):
         if x == 8 and y == 9:
             print("{:01d}{}".format(x, y),)
             break
-        if x == y or y < x:
+        if y <= x:
             continue
         print("{:01d}{}, ".format(x, y), end='')
