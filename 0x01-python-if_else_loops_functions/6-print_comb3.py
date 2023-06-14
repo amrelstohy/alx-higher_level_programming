@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-for u in range(9):
-    for d in range(u+1, 10):
-        if u == 8 and d == 9:
-            print(f"{u}{d}".format(u, d))
-        else:
-            print(f"{u}{d},".format(u, d), end=" ")
+for x in range(10):
+    for y in range(10):
+        if x == 8 and y == 9:
+            print("{:01d}{}".format(x, y),)
+            break
+        if x == y or y < x:
+            continue
+        print("{:01d}{}, ".format(x, y), end='')
