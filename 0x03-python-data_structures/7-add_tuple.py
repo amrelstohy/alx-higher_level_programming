@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
 def add_tuple(tuple_a=(), tuple_b=()):
-    a=[]
-    b=[]
-    c=[]
-    for x in range(0,2):
+    a = []
+    b = []
+    c = []
+    for x in range(0, 2):
         if len(tuple_a) <= x:
             a.append(0)
         else:
@@ -14,4 +14,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
         else:
             b.append(tuple_b[x])
         c.append(a[x]+b[x])
-    return((c[0],c[1]))
+    return ((c[0], c[1]))
