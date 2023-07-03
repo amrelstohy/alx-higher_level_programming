@@ -7,4 +7,4 @@ def uniq_add(my_list=[]):
         if n not in black_list:
             som += n
             black_list.append(n)
-    return(som)
+    return (som)
