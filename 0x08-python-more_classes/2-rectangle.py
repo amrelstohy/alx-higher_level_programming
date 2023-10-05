@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""hi"""
+"""
+hi
+"""
 
 
 class Rectangle:
