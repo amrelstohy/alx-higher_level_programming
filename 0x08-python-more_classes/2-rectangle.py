@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """hi"""
+    """Definition a class rectangle."""
 
     def __init__(self, width=0, height=0):
         self.height = height
