@@ -10,7 +10,7 @@ class Rectangle:
         self.height = height
         self.width = width
 
-        @property
+    @property
     def width(self):
         """hi."""
         return self.__width
