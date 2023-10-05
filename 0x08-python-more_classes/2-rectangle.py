@@ -2,7 +2,7 @@
 """hi"""
 
 
-class rectangle:
+class Rectangle:
     """hi"""
     
     def __init__(self, width=0, height=0):
