@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Rectangle."""
+"""Create a Rectangle class."""
 
 
 class Rectangle:
