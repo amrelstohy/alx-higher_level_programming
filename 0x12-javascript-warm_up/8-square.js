@@ -15,4 +15,5 @@ if (isNaN(size)) {
     }
     console.log('\n');
   }
+  console.log('\n');
 }
