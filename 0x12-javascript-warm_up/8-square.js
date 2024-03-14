@@ -11,9 +11,8 @@ if (isNaN(size)) {
 } else {
   for (let x = 0; x < size; x++) {
     for (let y = 0; y < size; y++) {
-      console.log('x');
+      console.log('X');
     }
     console.log('\n');
   }
-  console.log('\n');
 }
