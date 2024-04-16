@@ -1,34 +1,31 @@
 #!/usr/bin/python3
+
 """
-python script that ---
+you turn the lights in then you get them back off
 """
 
 import sys
+import MySQLdb
+
 
 if __name__ == "__main__":
-    import MySQLdb
-    if (len(sys.argv) == 5):
-        user = sys.argv[1]
-        password = sys.argv[2]
-        database = sys.argv[3]
-        conn = MySQLdb.connect(
+    username, password, database, state_name = sys.argv[1:]
+    db = MySQLdb.connect(
             host="localhost",
             port=3306,
-            user=user,
+            user=username,
             passwd=password,
-            db=database,
-            charset="utf8")
-        cur = conn.cursor()
-        sql = "SELECT cities.name FROM cities INNER \
-        JOIN states ON cities.state_id = states.id \
-        WHERE states.name LIKE '{}' ORDER BY \
-        cities.id".format(sys.argv[4])
-        cur.execute(sql)
-        query_rows = cur.fetchall()
-        _len = len(query_rows)
-        if _len != 0:
-            for i in range(_len - 1):
-                print("{}, ".format(query_rows[i][0]), end="")
-            print(query_rows[_len-1][0])
-        cur.close()
-        conn.close()
+            db=database
+    )
+    cur = db.cursor()
+    cur.execute("SELECT cities.name FROM states JOIN cities ON"
+                " cities.state_id = states.id WHERE states.name = %s"
+                " ORDER BY cities.id ASC", (state_name,))
+    rows = cur.fetchall()
+    cities = [row[0] for row in rows]
+    if cities:
+        print(', '.join(cities))
+    else:
+        print()
+    cur.close()
+    db.close()
