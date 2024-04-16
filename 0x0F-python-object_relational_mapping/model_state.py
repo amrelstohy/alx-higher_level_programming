@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 """
 you turn the lights in then you get them back off
 """
