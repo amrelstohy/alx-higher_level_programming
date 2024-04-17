@@ -19,5 +19,5 @@ if __name__ == '__main__':
     session = session()
     data = session.query(State).order_by(State.id).all()
     for i in data:
-        print(i.id, + ':' + i.name)
+        print(i.id, ':', i.name)
     
