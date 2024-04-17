@@ -16,5 +16,6 @@ if __name__ == '__main__':
         pool_pre_ping=True
         )
     session = Session(engine)
-    session.query(State).order_by(states.id).all()
+    data = session.query(State).order_by('states.id').all()
+    print(data)
     
