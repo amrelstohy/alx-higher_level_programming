@@ -19,4 +19,3 @@ if __name__ == '__main__':
     data = session.query(State).order_by(State.id).all()
     for i in data:
         print("{}: {}".format(i.id, i.name))
-    
