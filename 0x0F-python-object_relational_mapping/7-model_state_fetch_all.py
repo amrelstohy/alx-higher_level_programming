@@ -18,5 +18,6 @@ if __name__ == '__main__':
     session = sessionmaker(engine)
     session = session()
     data = session.query(State).order_by(State.id).all()
-    print(data.id, data.name)
+    for i in data:
+        print(i)
     
