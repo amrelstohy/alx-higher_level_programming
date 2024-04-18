@@ -16,4 +16,4 @@ if __name__ == '__main__':
         pool_pre_ping=True)
     session = Session(engine)
     data = session.query(State).first()
-    print(data)
+    print("{}: {}".format(data.id, data.name))
