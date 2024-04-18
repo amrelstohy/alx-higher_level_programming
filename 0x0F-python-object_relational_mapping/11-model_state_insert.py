@@ -19,3 +19,4 @@ if __name__ == '__main__':
     new = State(name = "Louisiana")
     session.add(new)
     print(session.query(State).filter(State.name == "Louisiana").all()[0].id)
+    session.close()
