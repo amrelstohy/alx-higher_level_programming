@@ -17,4 +17,4 @@ if __name__ == '__main__':
         )
     session = Session(engine)
     data = session.query(State).filter(State.name == sys.argv[4]).all()
-    print(data.id)
+    print(data[0].id)
