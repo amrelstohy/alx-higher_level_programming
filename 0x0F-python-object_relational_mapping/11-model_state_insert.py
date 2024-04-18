@@ -18,4 +18,4 @@ if __name__ == '__main__':
     session = Session(engine)
     new = State(name = "Louisiana")
     session.add(new)
-    print(session.query(State).filter(State.name == "Louisiana").all()[0])
+    print(session.query(State).filter(State.name == "Louisiana").all()[0].id)
