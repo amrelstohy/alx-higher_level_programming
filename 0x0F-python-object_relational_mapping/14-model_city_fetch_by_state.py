@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
  a script that prints all City objects from the database
- """
-"""from model_state import Base, State """
+"""
 from model_state import Base, State
 from model_city import City
 from sqlalchemy.orm import Session
