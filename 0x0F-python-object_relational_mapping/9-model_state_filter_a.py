@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-a script that lists all State objects that contain the letter a from the database
+a script that lists all State objects that contain the letter 'a'
 """
 from model_state import Base, State
 from sqlalchemy.orm import Session
@@ -16,6 +16,7 @@ if __name__ == '__main__':
         pool_pre_ping=True
         )
     session = Session(engine)
-    data = session.query(State).order_by(State.id).filter(State.name.like('%a%')).all()
+    data = session.query(State).order_by(State.id).filter(
+        State.name.like('%a%')).all()
     for i in data:
         print("{}: {}".format(i.id, i.name))
