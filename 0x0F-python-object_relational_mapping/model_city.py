@@ -4,6 +4,7 @@
 """
 from model_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.orm import relationship
 
 
 class City(Base):
@@ -25,3 +26,4 @@ class City(Base):
         ForeignKey('states.id'),
         nullable=False
         )
+    state = relationship("State")

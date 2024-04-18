@@ -3,6 +3,7 @@
  a script that prints all City objects from the database
  """
 """from model_state import Base, State """
+from model_state import Base, State
 from model_city import City
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
@@ -19,5 +20,5 @@ if __name__ == '__main__':
     session = Session(engine)
     data = session.query(City).order_by(City.id).all()
     for i in data:
-        print("{}: ({}) <{}>".format(i.state_id, i.id, i.name))
+        print("{}: ({}) {}".format(i.state.name, i.id, i.name))
     session.close()
