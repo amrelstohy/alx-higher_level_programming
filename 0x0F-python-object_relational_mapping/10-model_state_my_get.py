@@ -16,5 +16,5 @@ if __name__ == '__main__':
         pool_pre_ping=True
         )
     session = Session(engine)
-    data = session.query(State).filter(State.name == sys.argv[4]).all()
+    data = session.query(State).filter_by(name = sys.argv[4]).all()
     print(len(data))
