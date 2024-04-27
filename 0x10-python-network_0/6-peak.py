@@ -9,6 +9,7 @@ def find_peak(list_of_integers):
     x = list_of_integers
     l = 0
     r = len(x) - 1
+    
     if (len(x) == 0):
         return "None"
     while l < r:
